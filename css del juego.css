@@ -1,0 +1,171 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*incluye el padding y borde haciendo que no se desajuste*/
+}
+.body{
+background-image: url("fondo.jpg");/*aplica una imagen a el fondo*/
+background-size: cover;/*hace que la imagen se adapte para cubrir toda la pantalla*/
+background-position: center;
+background-attachment: fixed;/*la imagen no se mueve al desplazarce*/
+overflow-x: hidden;
+overflow-y: auto;
+}
+header{
+   display: flex;/*crea un contenedor flexible herendado esto a sus elementos hijos*/
+   align-items: center;
+   justify-content: space-between;/*los elementos se alinean a cada esquina del contenedor*/
+   padding: 1rem;/*separacion entre elementos*/
+   flex-wrap: wrap;/*si los elementos no caben en una sola fila,los alinea abajo*/
+   background:linear-gradient(9deg,#111c2a,#4f3996);
+}
+.nav-juego{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    list-style-type: none;
+    background:linear-gradient(9deg,#8E44AD,#4f3996);
+   border-radius: 0px 0px 45px 45px;
+} 
+.nav-list-juego{
+    display: flex;
+    list-style-type:none ;
+    gap: 10rem;
+}
+.nav-list-juego a{
+    text-decoration: none;
+    color: azure;
+}
+.nav-list-juego a:hover{
+  display: inline-block; /* Hace que el enlace se comporte como un cuadro */
+  padding: 10px 20px;
+  color: #f0f7ff;
+  background-color: #4f3996;
+}
+.abrir-menu-juego{
+    display: none;
+    background-color: #4f3996;
+    color: rgb(247, 221, 26);
+    font-size: 30px;
+    border-radius: 40%;
+    border: none;
+    cursor: pointer;
+}
+.mostrar-menu-juego{
+  display: flex !important;
+  flex-direction: column;
+}
+.logo-section-juego{
+    display:flex;
+}
+.logo-section-juego img{
+    height: 50px;
+    width: auto;
+    display: block;
+}
+#wrapper {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+#game {
+   height: 100vh;
+   max-height: 700px;
+   display: flex;
+   flex-wrap:wrap;
+   align-items: center;
+   justify-content: center;
+}
+
+#stats {
+   color: white;
+   position: absolute;
+   padding: 1rem;
+   text-align: center;
+   width: calc(100% - 2rem);
+   font-size: 3rem;
+}
+
+.card {
+   width: 120px;
+   height: 150px;
+   margin: 1rem;
+   position: relative;
+   transition: transform 0.5s;
+   transform-style: preserve-3d;
+}
+
+.card.active {
+   transform: rotateY(180deg);
+}
+
+.card div {
+   width: 100%;
+   height: 100%;
+   border-radius: 1rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   backface-visibility: hidden;
+   pointer-events: none;
+}
+
+.card .face {
+   background: rgb(255, 255, 0);
+   transform: rotateY( 180deg );
+   color: black;
+   font-size: 3rem;
+}
+.card .back {
+   border: 3px solid #05d1fe;
+   background: url(Python-logo-notext.svg.png) center / contain no-repeat;
+}
+#gametitle {
+   color: yellow;
+   font-size: 40px;
+   text-align: center;
+}
+#indications{
+ color: yellow;
+   font-size: 20px;
+   text-align: center;
+}
+@media screen and (max-width: 768px){
+  .logo-section-juego img{
+     height: 50px;
+    }
+  .logo-section-juego{
+    padding-left: 5px;
+  }
+  .abrir-menu-juego{
+    display: block;
+  }
+  .nav-juego{
+    display: none;
+    flex-direction: column;
+  }
+  .nav-list-juego{
+    gap: 1rem;
+  }
+   .mostrar-menu-juego{
+    display: flex !important;
+  }
+  #game {
+      gap: 0.5rem;
+   }
+   .card {
+      width: 80px;
+      height: 100px;
+   }
+   .card .face {
+      font-size: 1.5rem;
+   }
+   #stats, #gametitle, #indications {
+      padding: 0.5rem;
+      font-size:1rem;}
+}

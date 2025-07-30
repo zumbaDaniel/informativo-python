@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="css del juego.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body class="body">
+       <header>
+        <div class="logo-section-juego">
+         <img src="logo.jpg" alt="logo">
+        </div> 
+            <button id="abrir-menu-juego" class="abrir-menu-juego"><span> &#9776; </span></button>
+        </header>
+        <nav class="nav-juego" id="nav-juego">
+                <ul class="nav-list-juego">
+                    <li><a href="Intex.html">Pagina principal</a></li>
+                    <li><a href="ejemplos.html">Codigos de ejemplo</a></li>
+                    <li><a href="introduccion.html">¿Que es python?</a></li>
+                    <li><a href="creditos.html">Creditos</a></li>
+                </ul>
+            </nav>
+      <div id="gametitle">Palabras Reservadas de Python</div>
+      <br>
+      <div id="indications">Encuentra las palabras reservadas de Python, no te preocupes los intentos son ILIMITADOS 
+Buena suerte 😊<br> <b> Has click en una carta</b></div> <br>
+      <div id="stats">0 intentos</div>
+      
+
+      <div id="wrapper">
+         <div id="game"></div>
+      </div>
+      <script src="juego 2.0.js"></script>
+     <script>
+  document.getElementById("abrir-menu-juego").addEventListener("click", function () {
+    document.getElementById("nav-juego").classList.toggle("mostrar-menu-juego");
+  });
+</script>
+   </body>   
+</html>

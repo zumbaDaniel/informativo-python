@@ -1,0 +1,296 @@
+/*ejemplos*/
+/*cambios basicos*/
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*incluye el padding y borde haciendo que no se desajuste*/
+}
+.body{
+background-image: url("fondo.jpg");/*aplica una imagen a el fondo*/
+background-size: cover;/*hace que la imagen se adapte para cubrir toda la pantalla*/
+background-position: center;
+background-attachment: fixed;/*la imagen no se mueve al desplazarce*/
+}
+header{
+   display: flex;/*crea un contenedor flexible herendado esto a sus elementos hijos*/
+   align-items: center;
+   justify-content: space-between;/*los elementos se alinean a cada esquina del contenedor*/
+   padding: 1rem;/*separacion entre elementos*/
+   flex-wrap: wrap;/*si los elementos no caben en una sola fila,los alinea abajo*/
+   background:linear-gradient(9deg,#111c2a,#4f3996);
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    list-style-type: none;
+    background:linear-gradient(9deg,#8E44AD,#4f3996);
+   border-radius: 0px 0px 45px 45px;
+} 
+.nav-list{
+    display: flex;
+    list-style-type:none ;
+    gap: 10rem;
+}
+.nav-list a{
+    text-decoration: none;
+    color: azure;
+}
+.nav-list a:hover{
+  display: inline-block; /* Hace que el enlace se comporte como un cuadro */
+  padding: 10px 20px;
+  color: #f0f7ff;
+  background-color: #4f3996;
+}
+.abrir-menu{
+    display: none;
+    background-color: #4f3996;
+    color: rgb(247, 221, 26);
+    font-size: 30px;
+    border-radius: 40%;
+    border: none;
+    cursor: pointer;
+}
+.mostrar-menu{
+  display: flex !important;
+  flex-direction: column;
+}
+.titulo{
+    color: gold;
+    font-family:sans-serif;
+    font-size: 50px;
+    margin: 5%;
+}
+.logo-section{
+    display:flex;
+}
+.logo-section img{
+    height: 50px;
+    width: auto;
+    display: block;
+}
+.section{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 2rem;
+   gap: 10rem;
+   background-color:transparent;
+   border-radius: 0px 0px 40px 0px;
+}
+.left, .right{
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.right img{
+  max-width: 100%;
+  height: auto;
+}
+.p{
+color: rgb(228, 178, 52);
+margin: 5%;
+font-size: 10px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+word-break: break-word;
+}
+.main{
+  background-color: #161a35;
+  display: block;
+   align-items: center;
+   padding: 2rem;
+   gap: 10rem;
+}
+.h1-1{
+  color: #e07ced;
+  font-size: 24px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.p-2{
+color: rgb(252, 249, 175);
+margin: 5%;
+font-size: 20px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+word-break: break-word;
+}
+.contenedor{
+  margin: 0 auto;/* centra el contenedor dentro de su contenedor padre */
+  max-width: 70%;
+  height: auto;
+  display: flex;
+  justify-content: center;/* centra el contenido dentro del contenedor */
+  gap: 20px;
+}
+.contenedor img{
+  display: block;
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: all ease-in-out 0.5s;
+}
+.contenedor img:hover{
+  transform: scale(1.1); /* agranda la imagen un 10% */ 
+}
+@media screen and (max-width: 768px){
+  .logo-section img{
+     height: 40px;
+    }
+  .titulo {font-size: 50px;
+    text-align: start;}
+  .logo-section{
+    padding-left: 5px;
+  }
+  .abrir-menu{
+    display: block;
+  }
+  .nav{
+    display: none;
+    flex-direction: column;
+  }
+  .nav-list{
+    gap: 1rem;
+  }
+  .section,.main-ejemplos{
+    flex-direction: column;
+    text-align: start;
+    gap: 2rem;
+  }
+  .left{
+    order: 2;
+  }
+  .right{
+    order: 1;
+  }
+  .mostrar-menu{
+    display: flex !important;
+  }
+  .contenedor{
+    flex-wrap: wrap;
+  }
+  .contenedor img{
+    width: 100%;
+  height: 100%;
+  }
+}
+/*ejemplos*/
+.body-3{
+  background-image: url("body-Artguru.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.li{
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.main-ejemplos{
+   display: block;
+   align-items: center;
+   justify-content: center;
+   padding: 2rem;
+   gap: 2rem;
+   background-color:transparent;
+}
+.titulo2{
+  background-image: url("backgroud-texto.jpg");
+  padding: 3%;
+  justify-content: center;
+  display: flex;
+  color: gold;
+  font-family:sans-serif;
+  font-size: 20px;
+}
+.img{
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+/*introduccion*/
+.body-2{
+  background-image: url(fondo2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.h2{ 
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-image: url("texto-backgroup.jpg");
+}
+.p{
+  text-align: justify;
+  color: white;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.ul{
+  margin: 2%;
+  text-align: justify;
+  color: white;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.banner{
+  background-image: url("left.jpg");
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding: 3%;
+  font-size: 20px;
+}
+.contenedor-2{
+  margin: 0 auto;/* centra el contenedor dentro de su contenedor padre */
+  max-width: 75%;
+  display: flex;
+  gap: 2px;
+  height: auto;
+  justify-content:center;
+}
+.contenedor-2 img{
+  display: block;
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+  transition: all ease-in-out 0.5s;
+}
+.contenedor-2 img:hover{
+  transform: scale(1.1); /* agranda la imagen un 10% */ 
+}
+.main-2{
+  background-image: url("left.jpg");
+  display: block;
+   align-items: center;
+   padding: 1rem;
+   gap: 1rem;
+}
+.main-2 a{
+  color: rgb(123, 128, 196);
+}
+/*creditos*/
+.p-3{
+  background-image: url("backgroud.jpg");
+  text-align: justify;
+  color: white;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 5%;
+}
+.h2-2{ 
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #290c3c;
+}
+.p-3{
+  background-image: url("backgroud.jpg");
+  text-align: justify;
+  color: white;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 3%;
+}
